@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ApiComponent } from './api/api.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms'; // Import the FormsModule
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },

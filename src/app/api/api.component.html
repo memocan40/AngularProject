@@ -1,1 +1,26 @@
-<p>api works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Form Example</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Memes</h1>
+    <form (submit)="submitForm($event)">
+
+      <button type="submit">Get Memes</button>
+    </form>
+    <div class="result" *ngIf="apiResponse">
+      <ul>
+        <li *ngFor="let item of apiResponse">
+          <p>Id: {{ item.id }}</p>
+          <p>Name: {{ item.name }}</p>
+          <img [src]="item.url" alt="Bild">
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
