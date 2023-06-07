@@ -19,7 +19,7 @@ export class ServerComponent {
 
   onSubmit() {
     const inputTextValue = this.myForm.value.inputText;
-    this.http.get('http://localhost:5057/api/getdata').subscribe(response => {
+    this.http.get('http://localhost:5235/GetFetch').subscribe(response => {
       console.log(response); // Hier kannst du die Antwort weiterverarbeiten
     });
   }
