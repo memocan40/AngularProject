@@ -1,0 +1,16 @@
+<body>
+  <div class="header"><h1>Here you can make request on the own .NET Server</h1></div>
+  <main>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="inputText" placeholder="Gib deinen Text ein">
+      <button type="submit">GET-Anfrage senden</button>
+    </form>
+  </main>
+  <main>
+    <form (submit)="onPost($event)">
+      <input type="text" name="param" [(ngModel)]="inputText" placeholder="Gib deinen Text ein">
+      <button type="submit">POST-Anfrage senden</button>
+    </form>
+  </main>
+
+</body>

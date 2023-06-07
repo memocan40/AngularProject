@@ -1,0 +1,21 @@
+main {
+	background: #303F9F;
+	color: #FAFAFA;
+  display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 0 30px;
+	text-align: center;
+}
+.header {
+  position: absolute;
+  top: 20;
+  left: 0;
+  width: 100%;
+	background: #303F9F;
+	color: #FAFAFA;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
