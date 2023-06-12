@@ -9,8 +9,14 @@
     <h1>Memes</h1>
     <form (submit)="submitForm($event)">
 
-      <button type="submit">Get Memes</button>
+      <button type="submit">Get All Memes</button>
     </form>
+
+    <form (submit)="searchsubmitForm($event)">
+      <input type="text" id="name" name="name" placeholder="Name">
+      <button type="submit">Search for Meme</button>
+    </form>
+
     <div class="result" *ngIf="apiResponse">
       <ul>
         <li *ngFor="let item of apiResponse">

@@ -29,4 +29,29 @@ export class ApiComponent {
       console.error('Error:', error);
     });
   }
+
+  async searchsubmitForm(event: Event) {
+    event.preventDefault(); // Verhindert das Neuladen der Seite bei Formulareinsendung
+
+    const nameInput = document.getElementById('name') as HTMLInputElement;
+    const nameFilter = nameInput.value.trim();
+
+    fetch('https://api.imgflip.com/get_memes')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // Verarbeiten der empfangenen Daten
+        this.apiResponse = data.data.memes.filter((item: any) =>
+          item.name.toLowerCase().includes(nameFilter.toLowerCase())
+        );
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
 }
