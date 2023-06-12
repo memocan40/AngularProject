@@ -42,3 +42,8 @@ button[type="submit"] {
   font-size: 16px;
 }
 
+.form-container {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* Füge eine Trennlinie am unteren Rand des Formularcontainers hinzu */
+  padding-bottom: 20px; /* Füge einen Abstand am unteren Rand des Formularcontainers hinzu */
+}

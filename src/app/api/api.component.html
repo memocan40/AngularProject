@@ -7,15 +7,18 @@
 <body>
   <div class="container">
     <h1>Memes</h1>
-    <form (submit)="submitForm($event)">
+    <div class="form-container">
+      <form (submit)="submitForm($event)">
+        <button type="submit">Get All Memes</button>
+      </form>
+    </div>
 
-      <button type="submit">Get All Memes</button>
-    </form>
-
-    <form (submit)="searchsubmitForm($event)">
-      <input type="text" id="name" name="name" placeholder="Name">
-      <button type="submit">Search for Meme</button>
-    </form>
+    <div class="form-container">
+      <form (submit)="searchsubmitForm($event)">
+        <input type="text" id="name" name="name" placeholder="Name">
+        <button type="submit">Search for Meme</button>
+      </form>
+    </div>
 
     <div class="result" *ngIf="apiResponse">
       <ul>
