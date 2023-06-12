@@ -22,6 +22,7 @@ input[type="text"] {
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px; /* Füge einen Abstand von 10px am unteren Rand des Eingabefelds hinzu */
 }
 
 button[type="submit"] {
@@ -44,6 +45,6 @@ button[type="submit"] {
 
 .form-container {
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc; /* Füge eine Trennlinie am unteren Rand des Formularcontainers hinzu */
-  padding-bottom: 20px; /* Füge einen Abstand am unteren Rand des Formularcontainers hinzu */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
